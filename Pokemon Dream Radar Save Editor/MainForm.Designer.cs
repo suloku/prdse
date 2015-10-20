@@ -16,7 +16,6 @@ namespace Pokemon_Dream_Radar_Save_Editor
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TextBox savegamename;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.NumericUpDown orbs_box;
 		private System.Windows.Forms.CheckBox dialga_check;
 		private System.Windows.Forms.CheckBox giratina_check;
 		private System.Windows.Forms.CheckBox hoho_check;
@@ -32,27 +31,43 @@ namespace Pokemon_Dream_Radar_Save_Editor
 		private System.Windows.Forms.CheckBox hoho_catch_check;
 		private System.Windows.Forms.CheckBox dialga_catch_check;
 		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.NumericUpDown numericUpDown4;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.NumericUpDown numericUpDown3;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.NumericUpDown numericUpDown2;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
 		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.CheckBox checkBox12;
-		private System.Windows.Forms.CheckBox checkBox11;
-		private System.Windows.Forms.CheckBox checkBox10;
-		private System.Windows.Forms.CheckBox checkBox9;
-		private System.Windows.Forms.CheckBox checkBox8;
-		private System.Windows.Forms.CheckBox checkBox7;
-		private System.Windows.Forms.CheckBox checkBox6;
-		private System.Windows.Forms.CheckBox checkBox5;
-		private System.Windows.Forms.CheckBox checkBox4;
-		private System.Windows.Forms.CheckBox checkBox3;
-		private System.Windows.Forms.CheckBox checkBox2;
-		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.NumericUpDown orbscash_box;
+		private System.Windows.Forms.NumericUpDown next_reward_orbs_box;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.NumericUpDown landorus_t_box;
+		private System.Windows.Forms.NumericUpDown thundurus_t_box;
+		private System.Windows.Forms.NumericUpDown tornadus_t_box;
+		private System.Windows.Forms.NumericUpDown captured_box;
+		private System.Windows.Forms.NumericUpDown clouds_box;
+		private System.Windows.Forms.NumericUpDown searches_box;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.NumericUpDown currclouds_box;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.NumericUpDown visor_box;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.NumericUpDown battery_box;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.NumericUpDown beam_box;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.NumericUpDown energyr_box;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.NumericUpDown dragnet_box;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.NumericUpDown vortex_box;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.NumericUpDown itemcnt_box;
 
 		private void InitializeComponent()
 		{
@@ -73,33 +88,72 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			this.lugia_check = new System.Windows.Forms.CheckBox();
 			this.hoho_check = new System.Windows.Forms.CheckBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-			this.label6 = new System.Windows.Forms.Label();
-			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-			this.label5 = new System.Windows.Forms.Label();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-			this.label4 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.label2 = new System.Windows.Forms.Label();
-			this.orbs_box = new System.Windows.Forms.NumericUpDown();
+			this.button3 = new System.Windows.Forms.Button();
+			this.next_reward_orbs_box = new System.Windows.Forms.NumericUpDown();
+			this.label7 = new System.Windows.Forms.Label();
+			this.orbscash_box = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.checkBox11 = new System.Windows.Forms.CheckBox();
-			this.checkBox10 = new System.Windows.Forms.CheckBox();
-			this.checkBox9 = new System.Windows.Forms.CheckBox();
-			this.checkBox8 = new System.Windows.Forms.CheckBox();
-			this.checkBox7 = new System.Windows.Forms.CheckBox();
-			this.checkBox5 = new System.Windows.Forms.CheckBox();
-			this.checkBox4 = new System.Windows.Forms.CheckBox();
-			this.checkBox3 = new System.Windows.Forms.CheckBox();
-			this.checkBox2 = new System.Windows.Forms.CheckBox();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.checkBox6 = new System.Windows.Forms.CheckBox();
-			this.checkBox12 = new System.Windows.Forms.CheckBox();
+			this.itemcnt_box = new System.Windows.Forms.NumericUpDown();
+			this.landorus_t_box = new System.Windows.Forms.NumericUpDown();
+			this.thundurus_t_box = new System.Windows.Forms.NumericUpDown();
+			this.tornadus_t_box = new System.Windows.Forms.NumericUpDown();
+			this.captured_box = new System.Windows.Forms.NumericUpDown();
+			this.clouds_box = new System.Windows.Forms.NumericUpDown();
+			this.searches_box = new System.Windows.Forms.NumericUpDown();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.button4 = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.currclouds_box = new System.Windows.Forms.NumericUpDown();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.visor_box = new System.Windows.Forms.NumericUpDown();
+			this.label14 = new System.Windows.Forms.Label();
+			this.battery_box = new System.Windows.Forms.NumericUpDown();
+			this.label13 = new System.Windows.Forms.Label();
+			this.beam_box = new System.Windows.Forms.NumericUpDown();
+			this.label12 = new System.Windows.Forms.Label();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.energyr_box = new System.Windows.Forms.NumericUpDown();
+			this.label15 = new System.Windows.Forms.Label();
+			this.dragnet_box = new System.Windows.Forms.NumericUpDown();
+			this.label16 = new System.Windows.Forms.Label();
+			this.vortex_box = new System.Windows.Forms.NumericUpDown();
+			this.label17 = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.totalorb_box)).BeginInit();
+			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.next_reward_orbs_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.orbscash_box)).BeginInit();
+			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.itemcnt_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.landorus_t_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.thundurus_t_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tornadus_t_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.captured_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.clouds_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.searches_box)).BeginInit();
+			this.groupBox4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.currclouds_box)).BeginInit();
+			this.groupBox5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.visor_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.battery_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.beam_box)).BeginInit();
+			this.groupBox7.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.energyr_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dragnet_box)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.vortex_box)).BeginInit();
+			this.SuspendLayout();
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(112, 12);
+			this.button1.Location = new System.Drawing.Point(230, 12);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 23);
 			this.button1.TabIndex = 0;
@@ -109,16 +163,16 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			// 
 			// savegamename
 			// 
-			this.savegamename.Location = new System.Drawing.Point(12, 41);
+			this.savegamename.Location = new System.Drawing.Point(18, 41);
 			this.savegamename.Name = "savegamename";
-			this.savegamename.Size = new System.Drawing.Size(298, 20);
+			this.savegamename.Size = new System.Drawing.Size(724, 20);
 			this.savegamename.TabIndex = 1;
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(646, 36);
+			this.button2.Location = new System.Drawing.Point(422, 12);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.Size = new System.Drawing.Size(100, 23);
 			this.button2.TabIndex = 12;
 			this.button2.Text = "Save";
 			this.button2.UseVisualStyleBackColor = true;
@@ -126,7 +180,7 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(316, 41);
+			this.label3.Location = new System.Drawing.Point(6, 16);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 13;
@@ -134,16 +188,16 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			// 
 			// totalorb_box
 			// 
-			this.totalorb_box.Location = new System.Drawing.Point(422, 39);
+			this.totalorb_box.Location = new System.Drawing.Point(112, 14);
 			this.totalorb_box.Maximum = new decimal(new int[] {
-			65535,
+			999999,
 			0,
 			0,
 			0});
 			this.totalorb_box.Name = "totalorb_box";
-			this.totalorb_box.ReadOnly = true;
 			this.totalorb_box.Size = new System.Drawing.Size(120, 20);
 			this.totalorb_box.TabIndex = 14;
+			this.totalorb_box.ValueChanged += new System.EventHandler(this.Totalorb_boxValueChanged);
 			// 
 			// groupBox1
 			// 
@@ -157,7 +211,7 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			this.groupBox1.Controls.Add(this.palkia_check);
 			this.groupBox1.Controls.Add(this.lugia_check);
 			this.groupBox1.Controls.Add(this.hoho_check);
-			this.groupBox1.Location = new System.Drawing.Point(555, 87);
+			this.groupBox1.Location = new System.Drawing.Point(495, 87);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(247, 124);
 			this.groupBox1.TabIndex = 15;
@@ -256,284 +310,518 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			// 
 			// groupBox2
 			// 
-			this.groupBox2.Controls.Add(this.numericUpDown4);
-			this.groupBox2.Controls.Add(this.label6);
-			this.groupBox2.Controls.Add(this.numericUpDown3);
-			this.groupBox2.Controls.Add(this.label5);
-			this.groupBox2.Controls.Add(this.numericUpDown2);
-			this.groupBox2.Controls.Add(this.label4);
-			this.groupBox2.Controls.Add(this.numericUpDown1);
-			this.groupBox2.Controls.Add(this.label2);
-			this.groupBox2.Controls.Add(this.orbs_box);
+			this.groupBox2.Controls.Add(this.button3);
+			this.groupBox2.Controls.Add(this.next_reward_orbs_box);
+			this.groupBox2.Controls.Add(this.label7);
+			this.groupBox2.Controls.Add(this.orbscash_box);
 			this.groupBox2.Controls.Add(this.label1);
 			this.groupBox2.Location = new System.Drawing.Point(12, 87);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(227, 152);
+			this.groupBox2.Size = new System.Drawing.Size(227, 99);
 			this.groupBox2.TabIndex = 24;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Orbs";
 			// 
-			// numericUpDown4
+			// button3
 			// 
-			this.numericUpDown4.Location = new System.Drawing.Point(89, 120);
-			this.numericUpDown4.Maximum = new decimal(new int[] {
-			65535,
+			this.button3.Location = new System.Drawing.Point(101, 66);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(120, 23);
+			this.button3.TabIndex = 36;
+			this.button3.Text = "Unlock next reward";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.Button3Click);
+			// 
+			// next_reward_orbs_box
+			// 
+			this.next_reward_orbs_box.Location = new System.Drawing.Point(101, 40);
+			this.next_reward_orbs_box.Maximum = new decimal(new int[] {
+			999999,
 			0,
 			0,
 			0});
-			this.numericUpDown4.Name = "numericUpDown4";
-			this.numericUpDown4.ReadOnly = true;
-			this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-			this.numericUpDown4.TabIndex = 33;
+			this.next_reward_orbs_box.Name = "next_reward_orbs_box";
+			this.next_reward_orbs_box.ReadOnly = true;
+			this.next_reward_orbs_box.Size = new System.Drawing.Size(120, 20);
+			this.next_reward_orbs_box.TabIndex = 35;
+			this.next_reward_orbs_box.ValueChanged += new System.EventHandler(this.Next_reward_orbs_boxValueChanged);
 			// 
-			// label6
+			// label7
 			// 
-			this.label6.Location = new System.Drawing.Point(35, 122);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(48, 23);
-			this.label6.TabIndex = 32;
-			this.label6.Text = "Blue";
+			this.label7.Location = new System.Drawing.Point(6, 42);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(90, 23);
+			this.label7.TabIndex = 34;
+			this.label7.Text = "Next reward orbs:";
 			// 
-			// numericUpDown3
+			// orbscash_box
 			// 
-			this.numericUpDown3.Location = new System.Drawing.Point(89, 94);
-			this.numericUpDown3.Maximum = new decimal(new int[] {
-			65535,
+			this.orbscash_box.Location = new System.Drawing.Point(101, 14);
+			this.orbscash_box.Maximum = new decimal(new int[] {
+			999999,
 			0,
 			0,
 			0});
-			this.numericUpDown3.Name = "numericUpDown3";
-			this.numericUpDown3.ReadOnly = true;
-			this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-			this.numericUpDown3.TabIndex = 31;
-			// 
-			// label5
-			// 
-			this.label5.Location = new System.Drawing.Point(35, 96);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(48, 23);
-			this.label5.TabIndex = 30;
-			this.label5.Text = "Orange:";
-			// 
-			// numericUpDown2
-			// 
-			this.numericUpDown2.Location = new System.Drawing.Point(89, 68);
-			this.numericUpDown2.Maximum = new decimal(new int[] {
-			65535,
-			0,
-			0,
-			0});
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.ReadOnly = true;
-			this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-			this.numericUpDown2.TabIndex = 29;
-			// 
-			// label4
-			// 
-			this.label4.Location = new System.Drawing.Point(35, 70);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(48, 23);
-			this.label4.TabIndex = 28;
-			this.label4.Text = "Green:";
-			// 
-			// numericUpDown1
-			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(89, 42);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
-			65535,
-			0,
-			0,
-			0});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.ReadOnly = true;
-			this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-			this.numericUpDown1.TabIndex = 27;
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(35, 44);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(48, 23);
-			this.label2.TabIndex = 26;
-			this.label2.Text = "Pink:";
-			// 
-			// orbs_box
-			// 
-			this.orbs_box.Location = new System.Drawing.Point(55, 17);
-			this.orbs_box.Maximum = new decimal(new int[] {
-			65535,
-			0,
-			0,
-			0});
-			this.orbs_box.Name = "orbs_box";
-			this.orbs_box.Size = new System.Drawing.Size(120, 20);
-			this.orbs_box.TabIndex = 25;
-			this.orbs_box.ValueChanged += new System.EventHandler(this.Orbs_boxValueChanged);
+			this.orbscash_box.Name = "orbscash_box";
+			this.orbscash_box.Size = new System.Drawing.Size(120, 20);
+			this.orbscash_box.TabIndex = 25;
+			this.orbscash_box.ValueChanged += new System.EventHandler(this.Orbscash_boxValueChanged);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(10, 18);
+			this.label1.Location = new System.Drawing.Point(6, 16);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(73, 23);
 			this.label1.TabIndex = 24;
-			this.label1.Text = "Current:";
+			this.label1.Text = "Expendable orbs:";
 			// 
 			// groupBox3
 			// 
-			this.groupBox3.Controls.Add(this.checkBox12);
-			this.groupBox3.Controls.Add(this.checkBox11);
-			this.groupBox3.Controls.Add(this.checkBox10);
-			this.groupBox3.Controls.Add(this.checkBox9);
-			this.groupBox3.Controls.Add(this.checkBox8);
-			this.groupBox3.Controls.Add(this.checkBox7);
-			this.groupBox3.Controls.Add(this.checkBox6);
-			this.groupBox3.Controls.Add(this.checkBox5);
-			this.groupBox3.Controls.Add(this.checkBox4);
-			this.groupBox3.Controls.Add(this.checkBox3);
-			this.groupBox3.Controls.Add(this.checkBox2);
-			this.groupBox3.Controls.Add(this.checkBox1);
+			this.groupBox3.Controls.Add(this.itemcnt_box);
+			this.groupBox3.Controls.Add(this.landorus_t_box);
+			this.groupBox3.Controls.Add(this.thundurus_t_box);
+			this.groupBox3.Controls.Add(this.tornadus_t_box);
+			this.groupBox3.Controls.Add(this.captured_box);
+			this.groupBox3.Controls.Add(this.clouds_box);
+			this.groupBox3.Controls.Add(this.searches_box);
+			this.groupBox3.Controls.Add(this.label11);
+			this.groupBox3.Controls.Add(this.label10);
+			this.groupBox3.Controls.Add(this.label9);
+			this.groupBox3.Controls.Add(this.label8);
+			this.groupBox3.Controls.Add(this.label6);
+			this.groupBox3.Controls.Add(this.label5);
+			this.groupBox3.Controls.Add(this.label4);
+			this.groupBox3.Controls.Add(this.label3);
+			this.groupBox3.Controls.Add(this.totalorb_box);
 			this.groupBox3.Location = new System.Drawing.Point(245, 87);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(297, 152);
+			this.groupBox3.Size = new System.Drawing.Size(244, 229);
 			this.groupBox3.TabIndex = 25;
 			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Extensions (Currently disabled)";
+			this.groupBox3.Text = "Highscores";
 			// 
-			// checkBox11
+			// itemcnt_box
 			// 
-			this.checkBox11.Location = new System.Drawing.Point(160, 116);
-			this.checkBox11.Name = "checkBox11";
-			this.checkBox11.Size = new System.Drawing.Size(131, 24);
-			this.checkBox11.TabIndex = 10;
-			this.checkBox11.Text = "Landorus Catched";
-			this.checkBox11.UseVisualStyleBackColor = true;
+			this.itemcnt_box.Location = new System.Drawing.Point(112, 118);
+			this.itemcnt_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.itemcnt_box.Name = "itemcnt_box";
+			this.itemcnt_box.Size = new System.Drawing.Size(120, 20);
+			this.itemcnt_box.TabIndex = 29;
+			this.itemcnt_box.ValueChanged += new System.EventHandler(this.Itemcnt_boxValueChanged);
 			// 
-			// checkBox10
+			// landorus_t_box
 			// 
-			this.checkBox10.Location = new System.Drawing.Point(160, 95);
-			this.checkBox10.Name = "checkBox10";
-			this.checkBox10.Size = new System.Drawing.Size(131, 24);
-			this.checkBox10.TabIndex = 9;
-			this.checkBox10.Text = "Thundurus Catched";
-			this.checkBox10.UseVisualStyleBackColor = true;
+			this.landorus_t_box.Location = new System.Drawing.Point(112, 196);
+			this.landorus_t_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.landorus_t_box.Name = "landorus_t_box";
+			this.landorus_t_box.Size = new System.Drawing.Size(120, 20);
+			this.landorus_t_box.TabIndex = 28;
+			this.landorus_t_box.ValueChanged += new System.EventHandler(this.Landorus_t_boxValueChanged);
 			// 
-			// checkBox9
+			// thundurus_t_box
 			// 
-			this.checkBox9.Location = new System.Drawing.Point(160, 75);
-			this.checkBox9.Name = "checkBox9";
-			this.checkBox9.Size = new System.Drawing.Size(131, 24);
-			this.checkBox9.TabIndex = 8;
-			this.checkBox9.Text = "Tornadus Catched";
-			this.checkBox9.UseVisualStyleBackColor = true;
+			this.thundurus_t_box.Location = new System.Drawing.Point(112, 170);
+			this.thundurus_t_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.thundurus_t_box.Name = "thundurus_t_box";
+			this.thundurus_t_box.Size = new System.Drawing.Size(120, 20);
+			this.thundurus_t_box.TabIndex = 27;
+			this.thundurus_t_box.ValueChanged += new System.EventHandler(this.Thundurus_t_boxValueChanged);
 			// 
-			// checkBox8
+			// tornadus_t_box
 			// 
-			this.checkBox8.Location = new System.Drawing.Point(160, 55);
-			this.checkBox8.Name = "checkBox8";
-			this.checkBox8.Size = new System.Drawing.Size(131, 24);
-			this.checkBox8.TabIndex = 7;
-			this.checkBox8.Text = "Simulator Gamma";
-			this.checkBox8.UseVisualStyleBackColor = true;
+			this.tornadus_t_box.Location = new System.Drawing.Point(112, 144);
+			this.tornadus_t_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.tornadus_t_box.Name = "tornadus_t_box";
+			this.tornadus_t_box.Size = new System.Drawing.Size(120, 20);
+			this.tornadus_t_box.TabIndex = 26;
+			this.tornadus_t_box.ValueChanged += new System.EventHandler(this.Tornadus_t_boxValueChanged);
 			// 
-			// checkBox7
+			// captured_box
 			// 
-			this.checkBox7.Location = new System.Drawing.Point(160, 34);
-			this.checkBox7.Name = "checkBox7";
-			this.checkBox7.Size = new System.Drawing.Size(131, 24);
-			this.checkBox7.TabIndex = 6;
-			this.checkBox7.Text = "Simulator Beta";
-			this.checkBox7.UseVisualStyleBackColor = true;
+			this.captured_box.Location = new System.Drawing.Point(112, 92);
+			this.captured_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.captured_box.Name = "captured_box";
+			this.captured_box.Size = new System.Drawing.Size(120, 20);
+			this.captured_box.TabIndex = 24;
+			this.captured_box.ValueChanged += new System.EventHandler(this.Captured_boxValueChanged);
 			// 
-			// checkBox5
+			// clouds_box
 			// 
-			this.checkBox5.Location = new System.Drawing.Point(6, 116);
-			this.checkBox5.Name = "checkBox5";
-			this.checkBox5.Size = new System.Drawing.Size(165, 24);
-			this.checkBox5.TabIndex = 4;
-			this.checkBox5.Text = "Eureka Gamma (Landorus)";
-			this.checkBox5.UseVisualStyleBackColor = true;
+			this.clouds_box.Location = new System.Drawing.Point(112, 66);
+			this.clouds_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.clouds_box.Name = "clouds_box";
+			this.clouds_box.Size = new System.Drawing.Size(120, 20);
+			this.clouds_box.TabIndex = 23;
+			this.clouds_box.ValueChanged += new System.EventHandler(this.Clouds_boxValueChanged);
 			// 
-			// checkBox4
+			// searches_box
 			// 
-			this.checkBox4.Location = new System.Drawing.Point(6, 95);
-			this.checkBox4.Name = "checkBox4";
-			this.checkBox4.Size = new System.Drawing.Size(148, 24);
-			this.checkBox4.TabIndex = 3;
-			this.checkBox4.Text = "Eureka Beta (Thundurus)";
-			this.checkBox4.UseVisualStyleBackColor = true;
+			this.searches_box.Location = new System.Drawing.Point(112, 40);
+			this.searches_box.Maximum = new decimal(new int[] {
+			2147483647,
+			0,
+			0,
+			0});
+			this.searches_box.Name = "searches_box";
+			this.searches_box.Size = new System.Drawing.Size(120, 20);
+			this.searches_box.TabIndex = 22;
+			this.searches_box.ValueChanged += new System.EventHandler(this.Searches_boxValueChanged);
 			// 
-			// checkBox3
+			// label11
 			// 
-			this.checkBox3.Location = new System.Drawing.Point(6, 55);
-			this.checkBox3.Name = "checkBox3";
-			this.checkBox3.Size = new System.Drawing.Size(148, 24);
-			this.checkBox3.TabIndex = 2;
-			this.checkBox3.Text = "Dowsing";
-			this.checkBox3.UseVisualStyleBackColor = true;
+			this.label11.Location = new System.Drawing.Point(6, 198);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(100, 23);
+			this.label11.TabIndex = 21;
+			this.label11.Text = "Landorus time:";
 			// 
-			// checkBox2
+			// label10
 			// 
-			this.checkBox2.Location = new System.Drawing.Point(6, 75);
-			this.checkBox2.Name = "checkBox2";
-			this.checkBox2.Size = new System.Drawing.Size(148, 24);
-			this.checkBox2.TabIndex = 1;
-			this.checkBox2.Text = "Eureka Alpha (Tornadus)";
-			this.checkBox2.UseVisualStyleBackColor = true;
+			this.label10.Location = new System.Drawing.Point(6, 172);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(100, 23);
+			this.label10.TabIndex = 20;
+			this.label10.Text = "Thundurus time:";
 			// 
-			// checkBox1
+			// label9
 			// 
-			this.checkBox1.Location = new System.Drawing.Point(6, 35);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(148, 24);
-			this.checkBox1.TabIndex = 0;
-			this.checkBox1.Text = "Retrieval";
-			this.checkBox1.UseVisualStyleBackColor = true;
+			this.label9.Location = new System.Drawing.Point(6, 146);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(100, 23);
+			this.label9.TabIndex = 19;
+			this.label9.Text = "Tornadus time:";
 			// 
-			// checkBox6
+			// label8
 			// 
-			this.checkBox6.Location = new System.Drawing.Point(160, 14);
-			this.checkBox6.Name = "checkBox6";
-			this.checkBox6.Size = new System.Drawing.Size(148, 24);
-			this.checkBox6.TabIndex = 5;
-			this.checkBox6.Text = "Simulator Alpha";
-			this.checkBox6.UseVisualStyleBackColor = true;
+			this.label8.Location = new System.Drawing.Point(6, 120);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(100, 23);
+			this.label8.TabIndex = 18;
+			this.label8.Text = "Items recovered:";
 			// 
-			// checkBox12
+			// label6
 			// 
-			this.checkBox12.Location = new System.Drawing.Point(6, 14);
-			this.checkBox12.Name = "checkBox12";
-			this.checkBox12.Size = new System.Drawing.Size(148, 24);
-			this.checkBox12.TabIndex = 11;
-			this.checkBox12.Text = "Basic";
-			this.checkBox12.UseVisualStyleBackColor = true;
+			this.label6.Location = new System.Drawing.Point(6, 94);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(108, 23);
+			this.label6.TabIndex = 17;
+			this.label6.Text = "Captured Pokémon:";
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(6, 68);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(100, 23);
+			this.label5.TabIndex = 16;
+			this.label5.Text = "Examined Clouds:";
+			// 
+			// label4
+			// 
+			this.label4.Location = new System.Drawing.Point(6, 42);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(100, 23);
+			this.label4.TabIndex = 15;
+			this.label4.Text = "Searches:";
+			// 
+			// groupBox4
+			// 
+			this.groupBox4.Controls.Add(this.button4);
+			this.groupBox4.Controls.Add(this.label2);
+			this.groupBox4.Controls.Add(this.currclouds_box);
+			this.groupBox4.Location = new System.Drawing.Point(12, 192);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(227, 74);
+			this.groupBox4.TabIndex = 26;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Clouds";
+			// 
+			// button4
+			// 
+			this.button4.Location = new System.Drawing.Point(102, 45);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(119, 23);
+			this.button4.TabIndex = 2;
+			this.button4.Text = "Refill";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.Button4Click);
+			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(6, 21);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(80, 23);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Current clouds:";
+			// 
+			// currclouds_box
+			// 
+			this.currclouds_box.Location = new System.Drawing.Point(101, 19);
+			this.currclouds_box.Maximum = new decimal(new int[] {
+			30,
+			0,
+			0,
+			0});
+			this.currclouds_box.Name = "currclouds_box";
+			this.currclouds_box.Size = new System.Drawing.Size(120, 20);
+			this.currclouds_box.TabIndex = 0;
+			this.currclouds_box.ValueChanged += new System.EventHandler(this.Currclouds_boxValueChanged);
+			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.visor_box);
+			this.groupBox5.Controls.Add(this.label14);
+			this.groupBox5.Controls.Add(this.battery_box);
+			this.groupBox5.Controls.Add(this.label13);
+			this.groupBox5.Controls.Add(this.beam_box);
+			this.groupBox5.Controls.Add(this.label12);
+			this.groupBox5.Location = new System.Drawing.Point(495, 217);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(110, 99);
+			this.groupBox5.TabIndex = 27;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Upgrades";
+			// 
+			// visor_box
+			// 
+			this.visor_box.Location = new System.Drawing.Point(76, 68);
+			this.visor_box.Maximum = new decimal(new int[] {
+			5,
+			0,
+			0,
+			0});
+			this.visor_box.Minimum = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.visor_box.Name = "visor_box";
+			this.visor_box.Size = new System.Drawing.Size(29, 20);
+			this.visor_box.TabIndex = 34;
+			this.visor_box.Value = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.visor_box.ValueChanged += new System.EventHandler(this.Visor_boxValueChanged);
+			// 
+			// label14
+			// 
+			this.label14.Location = new System.Drawing.Point(5, 18);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(65, 23);
+			this.label14.TabIndex = 29;
+			this.label14.Text = "Beam:";
+			// 
+			// battery_box
+			// 
+			this.battery_box.Location = new System.Drawing.Point(76, 42);
+			this.battery_box.Maximum = new decimal(new int[] {
+			5,
+			0,
+			0,
+			0});
+			this.battery_box.Minimum = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.battery_box.Name = "battery_box";
+			this.battery_box.Size = new System.Drawing.Size(29, 20);
+			this.battery_box.TabIndex = 33;
+			this.battery_box.Value = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.battery_box.ValueChanged += new System.EventHandler(this.Battery_boxValueChanged);
+			// 
+			// label13
+			// 
+			this.label13.Location = new System.Drawing.Point(5, 44);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(77, 23);
+			this.label13.TabIndex = 30;
+			this.label13.Text = "Battery pack:";
+			// 
+			// beam_box
+			// 
+			this.beam_box.Location = new System.Drawing.Point(76, 16);
+			this.beam_box.Maximum = new decimal(new int[] {
+			5,
+			0,
+			0,
+			0});
+			this.beam_box.Minimum = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.beam_box.Name = "beam_box";
+			this.beam_box.Size = new System.Drawing.Size(29, 20);
+			this.beam_box.TabIndex = 32;
+			this.beam_box.Value = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.beam_box.ValueChanged += new System.EventHandler(this.Beam_boxValueChanged);
+			// 
+			// label12
+			// 
+			this.label12.Location = new System.Drawing.Point(5, 70);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(100, 23);
+			this.label12.TabIndex = 31;
+			this.label12.Text = "Visoscope:";
+			// 
+			// groupBox7
+			// 
+			this.groupBox7.Controls.Add(this.energyr_box);
+			this.groupBox7.Controls.Add(this.label15);
+			this.groupBox7.Controls.Add(this.dragnet_box);
+			this.groupBox7.Controls.Add(this.label16);
+			this.groupBox7.Controls.Add(this.vortex_box);
+			this.groupBox7.Controls.Add(this.label17);
+			this.groupBox7.Location = new System.Drawing.Point(622, 217);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Size = new System.Drawing.Size(120, 99);
+			this.groupBox7.TabIndex = 35;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "Items";
+			// 
+			// energyr_box
+			// 
+			this.energyr_box.Location = new System.Drawing.Point(76, 68);
+			this.energyr_box.Maximum = new decimal(new int[] {
+			99,
+			0,
+			0,
+			0});
+			this.energyr_box.Name = "energyr_box";
+			this.energyr_box.Size = new System.Drawing.Size(38, 20);
+			this.energyr_box.TabIndex = 34;
+			this.energyr_box.ValueChanged += new System.EventHandler(this.Energyr_boxValueChanged);
+			// 
+			// label15
+			// 
+			this.label15.Location = new System.Drawing.Point(5, 18);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(65, 23);
+			this.label15.TabIndex = 29;
+			this.label15.Text = "Vortex C.:";
+			// 
+			// dragnet_box
+			// 
+			this.dragnet_box.Location = new System.Drawing.Point(76, 42);
+			this.dragnet_box.Maximum = new decimal(new int[] {
+			99,
+			0,
+			0,
+			0});
+			this.dragnet_box.Name = "dragnet_box";
+			this.dragnet_box.Size = new System.Drawing.Size(38, 20);
+			this.dragnet_box.TabIndex = 33;
+			this.dragnet_box.ValueChanged += new System.EventHandler(this.Dragnet_boxValueChanged);
+			// 
+			// label16
+			// 
+			this.label16.Location = new System.Drawing.Point(5, 44);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(77, 23);
+			this.label16.TabIndex = 30;
+			this.label16.Text = "Dragnet C.:";
+			// 
+			// vortex_box
+			// 
+			this.vortex_box.Location = new System.Drawing.Point(76, 16);
+			this.vortex_box.Maximum = new decimal(new int[] {
+			99,
+			0,
+			0,
+			0});
+			this.vortex_box.Name = "vortex_box";
+			this.vortex_box.Size = new System.Drawing.Size(38, 20);
+			this.vortex_box.TabIndex = 32;
+			this.vortex_box.ValueChanged += new System.EventHandler(this.Vortex_boxValueChanged);
+			// 
+			// label17
+			// 
+			this.label17.Location = new System.Drawing.Point(5, 70);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(100, 23);
+			this.label17.TabIndex = 31;
+			this.label17.Text = "Energy R.:";
 			// 
 			// MainForm
 			// 
+			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(814, 250);
+			this.ClientSize = new System.Drawing.Size(774, 327);
+			this.Controls.Add(this.groupBox7);
+			this.Controls.Add(this.groupBox5);
+			this.Controls.Add(this.groupBox4);
+			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.totalorb_box);
-			this.Controls.Add(this.label3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.savegamename);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.groupBox3);
 			this.Name = "MainForm";
-			this.Text = "Pokemon Dream Radar Save Editor 0.1 by suloku\'15";
+			this.Text = "Pokemon Dream Radar Save Editor 0.2 by suloku\'15";
 			this.Load += new System.EventHandler(this.MainFormLoad);
+			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainFormDragDrop);
+			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainFormDragEnter);
 			((System.ComponentModel.ISupportInitialize)(this.totalorb_box)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.orbs_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.next_reward_orbs_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.orbscash_box)).EndInit();
 			this.groupBox3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.itemcnt_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.landorus_t_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.thundurus_t_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tornadus_t_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.captured_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.clouds_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.searches_box)).EndInit();
+			this.groupBox4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.currclouds_box)).EndInit();
+			this.groupBox5.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.visor_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.battery_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.beam_box)).EndInit();
+			this.groupBox7.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.energyr_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dragnet_box)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.vortex_box)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 		}
 	}
 }

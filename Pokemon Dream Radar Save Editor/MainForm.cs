@@ -36,17 +36,35 @@ namespace Pokemon_Dream_Radar_Save_Editor
 			//
 		}
 		byte[] savebuffer = new byte[692];
-		short orbs;
-		short total_orbs;
+		UInt32 orbscash;
+		byte currclouds;
+		//Upgrades
+		byte beam;
+		byte battery;
+		byte visor;
+		//Items
+		byte vortex;
+		byte dragnet;
+		byte energyr;
+		//Highscire
+		UInt32 total_orbs;
+		UInt32 next_reward_orbs;
+		UInt32 searches;
+		UInt32 clouds;
+		UInt32 captured;
+		UInt32 itemcnt;
+		UInt32 tornadus_t;
+		UInt32 thundurus_t;
+		UInt32 landorus_t;
+
+		//Flags
 		byte gen4ext;
 		byte gen4ext_captured;
+		byte gen4ext_captured2;
+		
 		public string savegame
         {
             get { return savegamename.Text; }
-        }
-		public string orbs_s
-        {
-			get { return orbs.ToString(); }
         }
 
 		/// <summary>
@@ -72,6 +90,90 @@ namespace Pokemon_Dream_Radar_Save_Editor
 		        offset += read;
 		    }
 		}
+		private void PDR_read_data()
+		{
+	            System.IO.FileStream saveFile;
+	            saveFile = new FileStream(savegame, FileMode.Open);
+	            ReadWholeArray(saveFile, savebuffer);
+	            saveFile.Close();
+	            //Orbs
+	            orbscash = BitConverter.ToUInt32(savebuffer, 0x68);
+				next_reward_orbs = BitConverter.ToUInt32(savebuffer, 0x288);
+				currclouds = savebuffer[0x74];
+				//Upgrades
+				beam = savebuffer[0x71];
+				battery = savebuffer[0x72];
+				visor = savebuffer[0x73];
+				//Items
+				vortex = savebuffer[0x268];
+				dragnet = savebuffer[0x269];
+				energyr = savebuffer[0x26A];
+	            //Highscores
+	            total_orbs = BitConverter.ToUInt32(savebuffer, 0x6C);
+				searches = BitConverter.ToUInt32(savebuffer, 0x28C);
+				clouds = BitConverter.ToUInt32(savebuffer, 0x290);
+				captured = BitConverter.ToUInt32(savebuffer, 0x294);
+				itemcnt = BitConverter.ToUInt32(savebuffer, 0x298);
+				tornadus_t = BitConverter.ToUInt32(savebuffer, 0x29C);
+				thundurus_t = BitConverter.ToUInt32(savebuffer, 0x2A0);
+				landorus_t = BitConverter.ToUInt32(savebuffer, 0x2A4);
+	            //Flags
+	            gen4ext = savebuffer[0x26E];
+	            gen4ext_captured = savebuffer[0x272];
+	            gen4ext_captured2 = savebuffer[0x273];
+
+
+
+	        //Set data
+	            //Orbs
+	            orbscash_box.Value = orbscash;
+	            next_reward_orbs_box.Value = next_reward_orbs;
+	            currclouds_box.Value = currclouds;
+
+	            //Upgrades
+	            beam_box.Value = beam+1;
+	            battery_box.Value = battery+1;
+	            visor_box.Value = visor+1;
+	            	//Set max for current cloud box based on visor level
+	            	currclouds_box.Maximum = 10+(5*visor);
+	            //Items
+	            vortex_box.Value = vortex;
+	            dragnet_box.Value = dragnet;
+	            energyr_box.Value = energyr;
+	            //Highscores
+	            totalorb_box.Value = total_orbs;
+	            searches_box.Value = searches;
+	            clouds_box.Value = clouds;
+	            captured_box.Value = captured;
+	            itemcnt_box.Value = itemcnt;
+	            tornadus_t_box.Value = tornadus_t;
+	            thundurus_t_box.Value = thundurus_t;
+	            landorus_t_box.Value = landorus_t;
+
+	            //Parse extension unlocked flags
+	            if ((gen4ext & 0x4) >0) dialga_check.Checked = true;
+	            else dialga_check.Checked = false;
+	            if ((gen4ext & 0x8) >0) palkia_check.Checked = true;
+	            else palkia_check.Checked = false;
+	            if ((gen4ext & 0x10) >0) giratina_check.Checked = true;
+	            else giratina_check.Checked = false;
+	            if ((gen4ext & 0x20) >0) hoho_check.Checked = true;
+	            else hoho_check.Checked = false;
+	            if ((gen4ext & 0x40) >0) lugia_check.Checked = true;
+	            else lugia_check.Checked = false;
+	            
+	            //Parse extension pokemon flags
+	            if ((gen4ext_captured & 0x10) >0) dialga_catch_check.Checked = true;
+	            else dialga_catch_check.Checked = false;
+	            if ((gen4ext_captured & 0x20) >0) palkia_catch_check.Checked = true;
+	            else palkia_catch_check.Checked = false;
+	            if ((gen4ext_captured & 0x40) >0) giratina_catch_check.Checked = true;
+	            else giratina_catch_check.Checked = false;
+	            if ((gen4ext_captured & 0x80) >0) hoho_catch_check.Checked = true;
+	            else hoho_catch_check.Checked = false;
+	            if ((gen4ext_captured2 & 0x01) >0) lugia_catch_check.Checked = true;
+	            else lugia_catch_check.Checked = false;
+		}
 		private void PDR_get_data()
         {
             OpenFileDialog openFD = new OpenFileDialog();
@@ -82,41 +184,7 @@ namespace Pokemon_Dream_Radar_Save_Editor
                 #region filename
                 savegamename.Text = openFD.FileName;
                 #endregion
-            
-	            System.IO.FileStream saveFile;
-	            saveFile = new FileStream(savegame, FileMode.Open);
-	            ReadWholeArray(saveFile, savebuffer);
-	            saveFile.Close();
-	            total_orbs = BitConverter.ToInt16(savebuffer, 0x6C);
-	            orbs = BitConverter.ToInt16(savebuffer, 0x68);
-	            gen4ext = savebuffer[0x26E];
-	            gen4ext_captured = savebuffer[0x272];;
-	            //Set data
-	            totalorb_box.Value = total_orbs;
-	            orbs_box.Value = orbs;
-	            //Parse extension unlocked flags
-	            if ((gen4ext & 0x4) >1) dialga_check.Checked = true;
-	            else dialga_check.Checked = false;
-	            if ((gen4ext & 0x8) >1) palkia_check.Checked = true;
-	            else palkia_check.Checked = false;
-	            if ((gen4ext & 0x10) >1) giratina_check.Checked = true;
-	            else giratina_check.Checked = false;
-	            if ((gen4ext & 0x20) >1) hoho_check.Checked = true;
-	            else hoho_check.Checked = false;
-	            if ((gen4ext & 0x40) >1) lugia_check.Checked = true;
-	            else lugia_check.Checked = false;
-	            
-	            //Parse extension pokemon flags
-	            if ((gen4ext_captured & 0x10) >1) dialga_catch_check.Checked = true;
-	            else dialga_catch_check.Checked = false;
-	            if ((gen4ext_captured & 0x20) >1) palkia_catch_check.Checked = true;
-	            else palkia_catch_check.Checked = false;
-	            if ((gen4ext_captured & 0x40) >1) giratina_catch_check.Checked = true;
-	            else giratina_catch_check.Checked = false;
-	            if ((gen4ext_captured & 0x80) >1) hoho_catch_check.Checked = true;
-	            else hoho_catch_check.Checked = false;
-	            //if ((gen4ext_captured & 0x80) >1) lugia_catch_check.Checked = true;
-	            //else lugia_catch_check.Checked = false;
+                PDR_read_data();
             }
             
         }
@@ -129,8 +197,30 @@ namespace Pokemon_Dream_Radar_Save_Editor
             {
 	            System.IO.FileStream saveFile;
 	            saveFile = new FileStream(saveFD.FileName, FileMode.Create);
+	            
 	            //Update orbs
-	            Array.Copy(BitConverter.GetBytes(orbs), 0, savebuffer, 0x68, 2);
+	            Array.Copy(BitConverter.GetBytes(orbscash), 0, savebuffer, 0x68, 4);
+	            Array.Copy(BitConverter.GetBytes(next_reward_orbs), 0, savebuffer, 0x288, 4);
+	            savebuffer[0x74] = currclouds;
+
+	            //Upgrades
+	            savebuffer[0x71] = beam;
+	            savebuffer[0x72] = battery;
+	            savebuffer[0x73] = visor;
+	            //Items
+	            savebuffer[0x268] = vortex;
+	            savebuffer[0x269] = dragnet;
+	            savebuffer[0x26A] = energyr;
+	            //Highscores
+	            Array.Copy(BitConverter.GetBytes(total_orbs), 0, savebuffer, 0x6C, 4);
+	            Array.Copy(BitConverter.GetBytes(searches), 0, savebuffer, 0x28C, 4);
+	            Array.Copy(BitConverter.GetBytes(clouds), 0, savebuffer, 0x290, 4);
+	            Array.Copy(BitConverter.GetBytes(captured), 0, savebuffer, 0x294, 4);
+	            Array.Copy(BitConverter.GetBytes(itemcnt), 0, savebuffer, 0x298, 4);
+	            Array.Copy(BitConverter.GetBytes(tornadus_t), 0, savebuffer, 0x29C, 4);
+	            Array.Copy(BitConverter.GetBytes(thundurus_t), 0, savebuffer, 0x2A0, 4);
+	            Array.Copy(BitConverter.GetBytes(landorus_t), 0, savebuffer, 0x2A4, 4);
+
 	            //Update extensions
 	            if (dialga_check.Checked) gen4ext |= 0x4;
 	            else gen4ext &= byte.MaxValue ^ 0x4;
@@ -152,9 +242,11 @@ namespace Pokemon_Dream_Radar_Save_Editor
 	            else gen4ext_captured &= byte.MaxValue ^ 0x40;
 	            if (hoho_catch_check.Checked) gen4ext_captured |= 0x80;
 	            else gen4ext_captured &= byte.MaxValue ^ 0x80;
-	            //if (lugia_catch_check.Checked) gen4ext_captured |= 0x40;
-	            //else gen4ext_captured &= byte.MaxValue ^ 0x40;
-	            savebuffer[0x272] = gen4ext_captured;	            
+	            if (lugia_catch_check.Checked) gen4ext_captured2 |= 0x1;
+	            else gen4ext_captured2 &= byte.MaxValue ^ 0x1;
+	            savebuffer[0x272] = gen4ext_captured;	
+				savebuffer[0x273] = gen4ext_captured2;
+				
 	            //Write file
 	            saveFile.Write(savebuffer, 0, savebuffer.Length);
 	            saveFile.Close();
@@ -173,13 +265,99 @@ namespace Pokemon_Dream_Radar_Save_Editor
 		{
 			PDR_get_data();
 		}
-		void Orbs_boxValueChanged(object sender, EventArgs e)
+		void Orbscash_boxValueChanged(object sender, EventArgs e)
 		{
-			orbs = Convert.ToInt16(orbs_box.Value);
+			orbscash = Convert.ToUInt32(orbscash_box.Value);
 		}
 		void Button2Click(object sender, EventArgs e)
 		{
 			PDR_save_data();
+		}
+		void MainFormDragEnter(object sender, DragEventArgs e)
+		{
+			e.Effect = DragDropEffects.All;
+		}
+		void MainFormDragDrop(object sender, DragEventArgs e)
+		{
+			string[] files =  (string[]) e.Data.GetData(DataFormats.FileDrop, false);
+			savegamename.Text =  files[0];
+			PDR_read_data();
+		}
+		void Next_reward_orbs_boxValueChanged(object sender, EventArgs e)
+		{
+	
+		}
+		void Button3Click(object sender, EventArgs e)
+		{
+			next_reward_orbs = 3000;
+			next_reward_orbs_box.Value = next_reward_orbs;
+		}
+		void Button4Click(object sender, EventArgs e)
+		{
+			currclouds =  Convert.ToByte(10+(5*visor));
+			currclouds_box.Value = currclouds;
+		}
+		void Currclouds_boxValueChanged(object sender, EventArgs e)
+		{
+			currclouds = Convert.ToByte(currclouds_box.Value);
+		}
+		void Totalorb_boxValueChanged(object sender, EventArgs e)
+		{
+			total_orbs = Convert.ToUInt32(totalorb_box.Value);
+		}
+		void Searches_boxValueChanged(object sender, EventArgs e)
+		{
+			searches = Convert.ToUInt32(searches_box.Value);
+		}
+		void Clouds_boxValueChanged(object sender, EventArgs e)
+		{
+			clouds = Convert.ToUInt32(clouds_box.Value);
+		}
+		void Captured_boxValueChanged(object sender, EventArgs e)
+		{
+			captured = Convert.ToUInt32(captured_box.Value);
+		}
+		void Itemcnt_boxValueChanged(object sender, EventArgs e)
+		{
+			itemcnt = Convert.ToUInt32(itemcnt_box.Value);
+		}
+		void Tornadus_t_boxValueChanged(object sender, EventArgs e)
+		{
+			tornadus_t = Convert.ToUInt32(tornadus_t_box.Value);
+		}
+		void Thundurus_t_boxValueChanged(object sender, EventArgs e)
+		{
+			thundurus_t = Convert.ToUInt32(thundurus_t_box.Value);
+		}
+		void Landorus_t_boxValueChanged(object sender, EventArgs e)
+		{
+			landorus_t = Convert.ToUInt32(landorus_t_box.Value);
+		}
+		void Beam_boxValueChanged(object sender, EventArgs e)
+		{
+			beam = Convert.ToByte(beam_box.Value-1);
+		}
+		void Battery_boxValueChanged(object sender, EventArgs e)
+		{
+			battery = Convert.ToByte(battery_box.Value-1);
+		}
+		void Visor_boxValueChanged(object sender, EventArgs e)
+		{
+			visor = Convert.ToByte(visor_box.Value-1);
+			currclouds_box.Maximum = 10+(5*visor);
+			if (currclouds_box.Value > currclouds_box.Maximum) currclouds_box.Value = currclouds_box.Maximum;
+		}
+		void Vortex_boxValueChanged(object sender, EventArgs e)
+		{
+			vortex = Convert.ToByte(vortex_box.Value);
+		}
+		void Dragnet_boxValueChanged(object sender, EventArgs e)
+		{
+			dragnet = Convert.ToByte(dragnet_box.Value);
+		}
+		void Energyr_boxValueChanged(object sender, EventArgs e)
+		{
+			energyr = Convert.ToByte(energyr_box.Value);
 		}
 
 	}
